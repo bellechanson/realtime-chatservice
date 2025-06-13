@@ -1,0 +1,63 @@
+.header {
+    position: fixed; /* ✅ 화면 상단 고정 */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #4b6cb7; /* ✅ 진한 파란색 배경 */
+    color: white;
+    display: flex; /* ✅ 수평 정렬 */
+    justify-content: space-between; /* 좌우 정렬 (로고 ↔ 버튼) */
+    align-items: center;
+    padding: 0 2rem; /* 좌우 여백 */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 하단 그림자 */
+}
+
+.main-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap; /* ✅ 줄바꿈 방지 */
+}
+
+/* 로고 링크 (React Router Link용) */
+.logo-link {
+    text-decoration: none;
+    color: inherit; /* 상위 color 상속 */
+}
+.logo-link:hover {
+    color: #e0e0e0; /* 호버 시 흐리게 */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.75rem; /* 로그인/회원가입 버튼 간격 */
+}
+
+/* 로그인/회원가입 버튼 */
+.auth-buttons .btn {
+    background-color: white;
+    color: #4b6cb7; /* 텍스트 파란색 */
+    padding: 0.4rem 0.9rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #e0e0e0; /* ✅ 호버 시 버튼 배경 흐리게 */
+}
+
+.welcome-text {
+    margin-top: 10px; /* ✅ 사용자 환영 메시지와 버튼 간 여백 */
+    text-align: center;
+}
+
+.logout-btn {
+    padding: 10px;
+    margin: auto; /* 중앙정렬 (flex 환경에서 영향 없음) */
+}

@@ -1,0 +1,60 @@
+plugins {
+    // ✅ 자바 프로젝트임을 선언
+    id 'java'
+    // ✅ Spring Boot 플러그인 적용 (버전: 3.5.0)
+    id 'org.springframework.boot' version '3.5.0'
+    // ✅ 의존성 자동 관리 플러그인
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'             // Maven groupId
+version = '0.0.1-SNAPSHOT'        // 버전 명시
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)  // ✅ JDK 17 사용
+    }
+}
+
+repositories {
+    mavenCentral()  // ✅ 라이브러리 다운로드 경로 설정 (공식 Maven 저장소)
+}
+
+dependencies {
+    // ✅ 기본 Spring Boot 기능 (빈 등록, 환경 설정 등)
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    // ✅ Spring Boot 테스트 프레임워크 (JUnit 포함)
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // ✅ WebSocket 기능을 위한 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+    // ✅ JPA (Hibernate 포함) 및 DB 연동을 위한 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // ✅ 일반 웹 서버 기능 (REST API 등)
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // ✅ 프론트엔드 SockJS 클라이언트 라이브러리 (웹소켓 폴백용)
+    implementation 'org.webjars:sockjs-client:1.5.1'
+
+    // ✅ 프론트엔드 Stomp 웹소켓 클라이언트 라이브러리
+    implementation 'org.webjars:stomp-websocket:2.3.4'
+
+    // ✅ MySQL JDBC 드라이버 (RDB 연결 시 필요)
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // ✅ Lombok (컴파일 시 코드 생성: @Getter, @Builder 등)
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // ✅ RabbitMQ 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()  // ✅ JUnit 5 기반 테스트 플랫폼 사용
+}

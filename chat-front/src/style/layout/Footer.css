@@ -1,0 +1,16 @@
+.main-footer {
+    position: fixed; /* 항상 화면 하단에 고정 */
+    bottom: 0;       /* 화면 하단으로 위치 */
+    left: 0;         /* 왼쪽 기준 정렬 */
+    width: 100vw;    /* 뷰포트 전체 너비로 설정 */
+    margin-left: 0;  /* 마진 초기화 (불필요할 수 있음) */
+
+    padding: 1rem;          /* 내부 여백 */
+    background-color: #f5f5f5; /* 연회색 배경 */
+    color: #777;           /* 텍스트 색 (회색톤) */
+    font-size: 0.9rem;
+    text-align: center;
+
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05); /* 위쪽 그림자 */
+    z-index: 1000;       /* 다른 요소 위에 떠 있게 설정 */
+}

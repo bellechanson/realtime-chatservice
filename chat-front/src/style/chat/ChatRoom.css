@@ -1,0 +1,108 @@
+/* 📦 전체 채팅 박스 스타일 */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 📨 메시지 영역 */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    background-color: #f7f7f7;
+}
+
+/* 🧾 메시지 한 줄 */
+.chat-message {
+    margin-bottom: 12px;
+}
+
+/* 🙋‍♂️ 내 메시지 우측 정렬 */
+.chat-message.me {
+    text-align: right;
+}
+
+/* 👤 사용자 프로필 (아바타 + 닉네임) */
+.chat-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+/* 👤 유저 닉네임 */
+.chat-username {
+    font-weight: bold;
+}
+
+/* 💬 말풍선 */
+.chat-bubble {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* 🎨 내 메시지 색상 */
+.chat-message.me .chat-bubble {
+    background-color: #c2e9fb;
+}
+
+/* ⏰ 시간 표시 */
+.chat-time {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* ⌨️ 입력창 하단 영역 */
+.chat-input-area {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+}
+
+/* ✍️ 채팅 입력 필드 */
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+/* 🚀 전송 버튼 */
+.chat-button {
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 💡 전송 버튼 hover 효과 */
+.chat-button:hover {
+    background-color: #1565c0;
+}
+
+/* 📩 새 메시지 알림 배너 */
+.new-message-notice {
+    background-color: #ffecb3;
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+}

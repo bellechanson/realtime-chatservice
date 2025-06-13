@@ -1,0 +1,59 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;     /* 수평 가운데 정렬 */
+    align-items: center;         /* 수직 가운데 정렬 */
+    text-align: center;
+    height: 100%;                /* 높이 최대 확보 */
+    margin-bottom: 2rem;         /* ✅ 푸터와 텍스트 간 여백 확보 */
+}
+
+.main-inner {
+    padding-bottom: 2rem;        /* 내부 여백 */
+    margin-bottom: 2rem;         /* ✅ 푸터 간 여백 */
+    margin-top: 2rem;            /* 상단 여백 */
+}
+
+/* ✅ 채팅방 생성 버튼 */
+.create-room-btn {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #4b6cb7;  /* 기본 배경색 */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.create-room-btn:hover {
+    background-color: #0056b3;  /* 호버 시 어두운 파랑으로 변경 */
+}
+
+/* ✅ 채팅방 리스트 (그리드 5칸) */
+.room-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* 한 줄에 5개씩 */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ✅ 채팅방 카드 */
+.room-card {
+    padding: 1.2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);    /* 살짝 튀어오르는 효과 */
+    background-color: #e6f0ff;      /* 호버 시 배경색 변경 */
+}
+
+.room-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
